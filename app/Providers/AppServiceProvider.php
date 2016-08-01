@@ -13,7 +13,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->publishes(['vendor/twbs/bootstrap' => public_path('bootstrap')], 'public');
     }
 
     /**
