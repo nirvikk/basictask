@@ -30,7 +30,7 @@ Route::post('/task', function (Request $request) {
     $task = new Task;
     $task->name = $request->name;
     $task->save();
-
+    
     return redirect('/');
 });
 
@@ -38,5 +38,8 @@ Route::post('/task', function (Request $request) {
  * Delete An Existing Task
  */
 Route::delete('/task/{id}', function ($id) {
-    //
+    Session::flash('flash_message', 'Are you sure?');
+    Task::findOrFail($id)->delete();
+
+    return redirect('/');
 });
