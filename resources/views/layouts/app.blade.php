@@ -13,6 +13,7 @@
         <div class="container">
             <nav class="navbar navbar-default">
                 <!-- Navbar Contents -->
+                <p class="navbar-text">Signed in as Nirvik Khanal</p>
             </nav>
         </div>
 
